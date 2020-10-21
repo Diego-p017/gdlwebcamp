@@ -113,6 +113,17 @@ textarea {
   /* globales */
   h2{
     font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  h2::after{
+    content: '';
+    margin: 0 auto;
+    background-image: url(/img/separador.png);
+    height: 3rem;
+    width: 10rem;
+    display: block;
   }
   .mgt-3{
     margin-top: 3rem;
@@ -120,6 +131,13 @@ textarea {
   .contenedor{
     width: 98%;
     margin: 0 auto;
+  }
+  .seccion{
+    padding: 3rem 0;
+  }
+  .seccion p{
+    font-size: 1.8rem;
+    text-align: center;
   }
   @media only screen and (min-width:480px) {
     .contenedor{
@@ -249,6 +267,7 @@ textarea {
   nav.navegacion-principal a:last-child{
     border: solid 2px #fe4918;
     color: #fe4918;
+    padding: 1rem 1rem;
   }
   nav.navegacion-principal a:last-child:hover{
     color: #fff;
