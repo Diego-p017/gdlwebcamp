@@ -131,6 +131,11 @@ textarea {
     font-family: 'PT Sans', sans-serif;
     margin: 0;
   }
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
   .mgt-3{
     margin-top: 3rem;
   }
@@ -407,6 +412,103 @@ div.detalle-evento p{
   margin-bottom: 2rem;
 }
 
+/* Lista Invitados */
+ul.lista-invitados li{
+  padding: 1rem;
+  float: left;
+}
+@media only screen and (min-width:480px) {
+  ul.lista-invitados li{
+    width: 50%;
+  }
+}
+@media only screen and (min-width:768px) {
+  ul.lista-invitados li{
+    width: 33.3%;
+  }
+}
+div.invitado{
+  position: relative;
+  overflow: hidden;
+}
+div.invitado img{
+  max-width: 100%;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out ;
+}
+div.invitado:hover img{
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+div.invitado p{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 1.5rem 1rem;
+  margin: 0;
+  background-color: rgba(0, 0, 0, .55);
+  width: 100%;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  color: #fe4918;
+  text-transform: uppercase;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+div.invitado:hover p{
+  bottom: -5rem;
+  opacity: 0;
+}
+
+/* Contador */
+.parallax::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+div.contador{
+  position: relative;
+  height: auto;
+}
+div.contador::before{
+  background-image: url(/img/bg-resumen.jpg);
+  content: '';
+}
+ul.resumen-evento{
+  position: relative;
+  padding: 12rem 0;
+}
+ul.resumen-evento li{
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.4rem;
+}
+@media only screen and (min-width:768px){
+  ul.resumen-evento li{
+    width: 25%;
+  }
+}
+p.numero{
+  color: #fe4918;
+  font-size: 6rem;
+  display: block;
+  margin: 0 0 1rem 0;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
