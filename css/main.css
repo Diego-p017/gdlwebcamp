@@ -160,10 +160,17 @@ textarea {
     font-weight: bold;
     margin-top: 2rem;
     transition: all .3s ease;
+    border: 2px solid #fe4918;
   }
   .button:hover{
     background-color: #e33000;
   }
+  .button.hollow,
+  .button.hollow:hover{
+    background-color: #fff;
+    color: #fe4918;
+  }
+  
   .float-rigth{
     float: right;
   }
@@ -476,6 +483,8 @@ div.invitado:hover p{
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  -webkit-filter: brightness(.8);
+  filter:brightness(.8);
 }
 div.contador{
   position: relative;
@@ -508,7 +517,65 @@ p.numero{
   font-size: 6rem;
   display: block;
   margin: 0 0 1rem 0;
+  font-family: 'Oswald', sans-serif;
 }
+
+/* Tabla lista-Precio */
+ul.lista-precios > li {
+  padding: 1rem;
+}
+@media only screen and (min-width:768px){
+  ul.lista-precios > li{
+    float: left;
+    width: 33.3%;
+  }
+} 
+div.tabla-precio{
+  border: 1px solid #e1e1e1;
+  background-color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+  transition: all .5s ease;
+}
+div.tabla-precio:hover{
+  transform: scale(1.1);
+  border: 1px solid  #fe4918;
+  box-shadow: 0 0 50px #666 ;
+
+}
+div.tabla-precio h3{
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+div.tabla-precio p.numero{
+  color: #000;
+  margin-top: 2rem 0;
+}
+div.tabla-precio ul li{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: #868686;
+  line-height: 2rem;
+}
+div.tabla-precio ul li:before{
+  font-family: 'FontAwesome';
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 .5rem;
+  font-size: 20px;
+  color: green;
+  -webkit-font-smoothing: antialiased;
+  content: '\f00c';
+}
+/** MAPA **/
+div.mapa{
+  height: 42rem;
+  background-color: #666;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
